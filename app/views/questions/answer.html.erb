@@ -1,8 +1,12 @@
 
-<%     if @questions.include?('?') %>
-<%=       "Silly question, get dressed and go to work!." %>
-<%    elsif @questions == "I am going to work" %>
-<%= "Great" %>
-<% else %>
-<%=       "I don't care, get dressed and go to work!" %>
-<% end %>
+<div class="container">
+  <p><%= @question %></p>
+  <%     if @question.include?('?') %>
+  <%=       "Silly question, get dressed and go to work!." %>
+  <%    elsif @question == "I am going to work" %>
+  <%= "Great" %>
+  <% else %>
+  <%=       "I don't care, get dressed and go to work!" %>
+  <% end %>
+  <%= link_to "back to", ask_path %>
+</div>
